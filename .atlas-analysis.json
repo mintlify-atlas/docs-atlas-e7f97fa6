@@ -1,0 +1,180 @@
+{
+  "projectType": "api-service",
+  "projectName": "Water Quality Backend API",
+  "projectDescription": "FastAPI backend service for monitoring water quality metrics with IoT devices, real-time data analysis, AI-powered insights, and alert notifications.",
+  "theme": "aspen",
+  "primaryColor": "#1E90FF",
+  "lightColor": "#4FC3F7",
+  "darkColor": "#0D47A1",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "architecture"
+            ]
+          },
+          {
+            "group": "Setup & Deployment",
+            "pages": [
+              "setup/installation",
+              "setup/environment-variables",
+              "setup/docker-deployment",
+              "setup/firebase-setup"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/vertical-slice-architecture",
+              "concepts/workspaces",
+              "concepts/meters",
+              "concepts/alerts",
+              "concepts/analysis"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/authentication",
+              "guides/meter-pairing",
+              "guides/data-analysis",
+              "guides/alert-management",
+              "guides/ai-chat",
+              "guides/workspace-sharing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api/auth/login",
+              "api/auth/register",
+              "api/auth/github-oauth",
+              "api/auth/password-reset"
+            ]
+          },
+          {
+            "group": "Workspaces",
+            "pages": [
+              "api/workspaces/overview",
+              "api/workspaces/create",
+              "api/workspaces/guest-management"
+            ]
+          },
+          {
+            "group": "Meters",
+            "pages": [
+              "api/meters/overview",
+              "api/meters/crud",
+              "api/meters/pairing",
+              "api/meters/records",
+              "api/meters/weather"
+            ]
+          },
+          {
+            "group": "Alerts",
+            "pages": [
+              "api/alerts/overview",
+              "api/alerts/crud",
+              "api/alerts/notifications"
+            ]
+          },
+          {
+            "group": "Analysis",
+            "pages": [
+              "api/analysis/overview",
+              "api/analysis/average",
+              "api/analysis/correlation",
+              "api/analysis/prediction",
+              "api/analysis/reports",
+              "api/analysis/ai-chat"
+            ]
+          },
+          {
+            "group": "Users",
+            "pages": [
+              "api/users/overview"
+            ]
+          },
+          {
+            "group": "Monitoring",
+            "pages": [
+              "api/monitoring/metrics"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Development",
+        "groups": [
+          {
+            "group": "Contributing",
+            "pages": [
+              "development/project-structure",
+              "development/branching-strategy",
+              "development/commit-conventions",
+              "development/testing"
+            ]
+          },
+          {
+            "group": "Integration",
+            "pages": [
+              "integration/firebase",
+              "integration/onesignal",
+              "integration/weather-api",
+              "integration/openai"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Real-time water quality monitoring with IoT meter devices",
+    "Multi-workspace collaboration with role-based access control",
+    "Advanced data analysis (averages, predictions, correlations)",
+    "AI-powered chat for analysis insights using OpenAI",
+    "Customizable alert system with email and push notifications",
+    "GitHub OAuth authentication and JWT-based authorization",
+    "Weather data integration for environmental context",
+    "Prometheus metrics for system monitoring",
+    "WebSocket support for real-time updates",
+    "PDF report generation with charts and visualizations"
+  ],
+  "publicApiSurface": [
+    "POST /auth/login/",
+    "POST /auth/register/",
+    "GET /auth/github/login",
+    "POST /auth/request-password-reset/",
+    "GET /workspaces/",
+    "POST /workspaces/",
+    "GET /workspaces/{id}",
+    "POST /workspaces/{id}/guest/",
+    "GET /meters/{id_workspace}/",
+    "POST /meters/{id_workspace}/",
+    "POST /meters/{id_workspace}/pair/{id_meter}/",
+    "GET /meters/records/{id_workspace}/{id_meter}/",
+    "GET /meters/{id_workspace}/weather/{id_meter}/",
+    "GET /alerts/",
+    "POST /alerts/",
+    "GET /alerts/notifications/",
+    "PUT /alerts/notifications/status/{notification_id}/",
+    "POST /analysis/average/",
+    "POST /analysis/correlation/",
+    "POST /analysis/prediction/",
+    "POST /analysis/report/",
+    "POST /analysis/ai/{analysis_id}/chat",
+    "GET /analysis/ai/{analysis_id}/session",
+    "GET /monitoring/metrics"
+  ]
+}
